@@ -1,0 +1,35 @@
+<!-- ============================================================
+  SECTION 3: CERTIFICATION STRIP
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #e85d1a
+  ============================================================ -->
+
+<style>
+.ae-cert-strip {
+  background: #e85d1a; width: 100%;
+  padding: 20px 5%;
+  display: flex; align-items: center; justify-content: center;
+  gap: 36px; flex-wrap: wrap;
+  font-family: 'Sora', sans-serif;
+}
+.ae-cert-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 700; color: #ffffff;
+}
+.ae-cert-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,0.5); flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .ae-cert-strip { gap: 20px; padding: 16px 4%; }
+  .ae-cert-item { font-size: 13px; }
+}
+</style>
+
+<div class="ae-cert-strip">
+  <div class="ae-cert-item"><div class="ae-cert-dot"></div> NSDC Certified</div>
+  <div class="ae-cert-item"><div class="ae-cert-dot"></div> Skill India Partner</div>
+  <div class="ae-cert-item"><div class="ae-cert-dot"></div> NASSCOM Recognized</div>
+  <div class="ae-cert-item"><div class="ae-cert-dot"></div> Microsoft Affiliated</div>
+  <div class="ae-cert-item"><div class="ae-cert-dot"></div> Government Approved Courses</div>
+</div>

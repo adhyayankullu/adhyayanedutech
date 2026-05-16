@@ -1,0 +1,265 @@
+<!-- ============================================================
+  SECTION 9: CONTACT FORM + BRANCHES
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #0d1b40
+
+  IMPORTANT FOR FORMS IN SYSTEME.IO:
+  Option A (Recommended): Delete this HTML form and instead use
+  Systeme.io's built-in Form element — it auto-connects to your
+  contacts list. Style it using the form settings.
+
+  Option B: Use this HTML form and connect it via a webhook
+  in your Systeme.io automation settings.
+  ============================================================ -->
+
+<style>
+.ae-contact-wrap {
+  padding: 80px 5%; background: #0d1b40;
+  font-family: 'Sora', sans-serif;
+}
+.ae-contact-wrap * { box-sizing: border-box; }
+.ae-contact-label {
+  font-size: 12px; font-weight: 700; color: #f0a500;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+}
+.ae-contact-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 800; color: #ffffff; line-height: 1.15; margin-bottom: 40px;
+}
+.ae-contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: start;
+}
+.ae-contact-intro {
+  font-size: 17px; color: rgba(255,255,255,0.65);
+  line-height: 1.7; margin-bottom: 36px;
+}
+.ae-contact-detail {
+  display: flex; align-items: flex-start; gap: 14px;
+  margin-bottom: 22px;
+}
+.ae-contact-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: rgba(232,93,26,0.2); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.ae-contact-detail h4 {
+  font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;
+}
+.ae-contact-detail p {
+  font-size: 15px; color: #ffffff; font-weight: 500; line-height: 1.5;
+}
+.ae-contact-detail a { color: #f4874f; text-decoration: none; }
+.ae-contact-detail a:hover { color: #f0a500; }
+
+/* Form box */
+.ae-form-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px; padding: 36px;
+}
+.ae-form-box h3 {
+  font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 26px;
+}
+.ae-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ae-form-group { margin-bottom: 18px; }
+.ae-form-group label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: rgba(255,255,255,0.55); margin-bottom: 7px; letter-spacing: 0.5px;
+}
+.ae-form-group input,
+.ae-form-group select,
+.ae-form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 12px 14px;
+  font-size: 14px; font-family: 'Sora', sans-serif;
+  color: #ffffff; outline: none;
+  transition: border-color 0.2s;
+}
+.ae-form-group input::placeholder,
+.ae-form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+.ae-form-group input:focus,
+.ae-form-group select:focus,
+.ae-form-group textarea:focus { border-color: rgba(232,93,26,0.6); }
+.ae-form-group select option { background: #0d1b40; color: #ffffff; }
+.ae-form-group textarea { resize: vertical; min-height: 90px; }
+.ae-submit-btn {
+  width: 100%; background: #e85d1a; color: #ffffff;
+  border: none; cursor: pointer;
+  padding: 14px; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  transition: all 0.25s; margin-top: 4px;
+}
+.ae-submit-btn:hover { background: #f4874f; transform: translateY(-1px); }
+
+/* Branches */
+.ae-branches {
+  margin-top: 60px; padding-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.ae-branch-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px; padding: 22px 26px;
+}
+.ae-branch-num {
+  font-size: 11px; font-weight: 700; color: #e85d1a;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+}
+.ae-branch-card h4 { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+.ae-branch-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+@media (max-width: 860px) {
+  .ae-contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ae-branches { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .ae-contact-wrap { padding: 60px 4%; }
+  .ae-form-row { grid-template-columns: 1fr; }
+  .ae-form-box { padding: 24px; }
+}
+</style>
+
+<div class="ae-contact-wrap" id="ae-contact">
+  <div class="ae-contact-label">Get In Touch</div>
+  <div class="ae-contact-title">Start Your Learning<br>Journey Today</div>
+
+  <div class="ae-contact-grid">
+
+    <!-- LEFT: Contact Info -->
+    <div>
+      <p class="ae-contact-intro">
+        Ready to secure your future? Contact us for a free counseling session and find the perfect course for your career goals. Admissions are open — join today!
+      </p>
+
+      <div class="ae-contact-detail">
+        <div class="ae-contact-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:9318543435">9318543435</a> / <a href="tel:9459014028">9459014028</a></p>
+        </div>
+      </div>
+
+      <div class="ae-contact-detail">
+        <div class="ae-contact-icon">☎️</div>
+        <div>
+          <h4>Landline</h4>
+          <p><a href="tel:01902314840">01902-314840</a></p>
+        </div>
+      </div>
+
+      <div class="ae-contact-detail">
+        <div class="ae-contact-icon">📍</div>
+        <div>
+          <h4>Branch 1 — Computer &amp; AI</h4>
+          <p>Near Government College Gate,<br>Kullu, Himachal Pradesh – 175101</p>
+        </div>
+      </div>
+
+      <div class="ae-contact-detail">
+        <div class="ae-contact-icon">📍</div>
+        <div>
+          <h4>Branch 2 — Beautician &amp; Fashion</h4>
+          <p>Above Bank of Baroda, Gandhi Nagar,<br>Kullu, Himachal Pradesh – 175101</p>
+        </div>
+      </div>
+
+      <div class="ae-contact-detail">
+        <div class="ae-contact-icon">📱</div>
+        <div>
+          <h4>Social Media</h4>
+          <p>@adhyayankullu on Instagram &amp; Facebook</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Enquiry Form -->
+    <div class="ae-form-box">
+      <h3>Enquire Now — It's Free!</h3>
+
+      <div class="ae-form-row">
+        <div class="ae-form-group">
+          <label>Your Name</label>
+          <input type="text" id="ae-name" placeholder="Full Name">
+        </div>
+        <div class="ae-form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="ae-phone" placeholder="9XXXXXXXXX">
+        </div>
+      </div>
+
+      <div class="ae-form-group">
+        <label>Email Address</label>
+        <input type="email" id="ae-email" placeholder="your@email.com">
+      </div>
+
+      <div class="ae-form-group">
+        <label>Course Interested In</label>
+        <select id="ae-course">
+          <option value="">– Select a Course –</option>
+          <option>DCAA – Diploma in Computer Application &amp; Accounting</option>
+          <option>DCA – Diploma in Computer Application</option>
+          <option>PGDCA – Post Graduate Diploma</option>
+          <option>Data Analytics &amp; Generative AI</option>
+          <option>Accounting &amp; Taxation</option>
+          <option>Advanced Excel &amp; Power BI</option>
+          <option>Web Development</option>
+          <option>Beautician &amp; Cosmetology</option>
+          <option>Fashion Designing</option>
+          <option>Combo Course</option>
+        </select>
+      </div>
+
+      <div class="ae-form-group">
+        <label>Message (Optional)</label>
+        <textarea id="ae-message" placeholder="Tell us about yourself or any questions..."></textarea>
+      </div>
+
+      <button type="button" class="ae-submit-btn" id="ae-submit-btn" onclick="aeSubmitForm()">
+        Send Enquiry →
+      </button>
+    </div>
+  </div>
+
+  <!-- BRANCHES -->
+  <div class="ae-branches">
+    <div class="ae-branch-card">
+      <div class="ae-branch-num">Branch 01</div>
+      <h4>Adhyayan Edutech — Computer &amp; AI Institute</h4>
+      <p>Near Government College Gate, Kullu, H.P. – 175101<br>📞 94590-14028 | 01902-314840</p>
+    </div>
+    <div class="ae-branch-card">
+      <div class="ae-branch-num">Branch 02</div>
+      <h4>Adhyayan Edutech — Beautician &amp; Fashion Institute</h4>
+      <p>Above Bank of Baroda, Gandhi Nagar, Kullu, H.P. – 175101<br>📞 93185-43435 | 94590-14028</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function aeSubmitForm() {
+  var btn = document.getElementById('ae-submit-btn');
+  var name = document.getElementById('ae-name').value;
+  var phone = document.getElementById('ae-phone').value;
+  if (!name || !phone) {
+    btn.textContent = '⚠ Please fill in Name and Phone';
+    btn.style.background = '#c0392b';
+    setTimeout(function(){ btn.textContent = 'Send Enquiry →'; btn.style.background = ''; }, 3000);
+    return;
+  }
+  btn.textContent = '✓ Enquiry Sent! We\'ll call you soon.';
+  btn.style.background = '#27ae60';
+  btn.disabled = true;
+  setTimeout(function(){
+    btn.textContent = 'Send Enquiry →';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 5000);
+}
+</script>

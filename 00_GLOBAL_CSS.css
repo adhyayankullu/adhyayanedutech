@@ -1,0 +1,68 @@
+/* ============================================================
+   ADHYAYAN EDUTECH — GLOBAL CSS
+   Paste this into: Systeme.io Page Settings → Custom CSS
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --ae-navy: #0d1b40;
+  --ae-navy-mid: #162254;
+  --ae-orange: #e85d1a;
+  --ae-orange-light: #f4874f;
+  --ae-orange-pale: #fdf0e8;
+  --ae-gold: #f0a500;
+  --ae-white: #ffffff;
+  --ae-off-white: #f8f6f2;
+  --ae-text-mid: #3d4f7c;
+  --ae-text-muted: #8a96b5;
+  --ae-border: rgba(13,27,64,0.1);
+  --ae-radius: 12px;
+  --ae-radius-lg: 20px;
+  --ae-transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.ae-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+.ae-wrap { font-family: 'Sora', sans-serif; }
+
+/* Section label */
+.ae-label {
+  font-size: 12px; font-weight: 700; color: var(--ae-orange);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+  display: block;
+}
+.ae-label--gold { color: var(--ae-gold); }
+
+/* Section title */
+.ae-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800; color: var(--ae-navy);
+  line-height: 1.15; margin-bottom: 16px;
+}
+.ae-title--white { color: #ffffff; }
+
+/* Section desc */
+.ae-desc {
+  font-size: 17px; color: var(--ae-text-mid);
+  max-width: 560px; line-height: 1.7; margin-bottom: 48px;
+}
+.ae-desc--white { color: rgba(255,255,255,0.65); }
+
+/* Buttons */
+.ae-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 10px;
+  font-size: 15px; font-weight: 700; font-family: 'Sora', sans-serif;
+  text-decoration: none; cursor: pointer; border: none;
+  transition: all var(--ae-transition);
+}
+.ae-btn--primary { background: var(--ae-orange); color: #ffffff; }
+.ae-btn--primary:hover { background: var(--ae-orange-light); transform: translateY(-2px); }
+.ae-btn--outline {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+}
+.ae-btn--outline:hover { background: rgba(255,255,255,0.1); }
+.ae-btn--dark { background: var(--ae-navy); color: #ffffff; }
+.ae-btn--dark:hover { background: var(--ae-navy-mid); }

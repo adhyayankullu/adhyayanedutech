@@ -1,0 +1,170 @@
+<!-- ============================================================
+  SECTION 4: COURSES
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #ffffff
+  ============================================================ -->
+
+<style>
+.ae-courses-wrap {
+  padding: 80px 5%; background: #ffffff;
+  font-family: 'Sora', sans-serif;
+}
+.ae-courses-wrap * { box-sizing: border-box; }
+.ae-sec-label {
+  font-size: 12px; font-weight: 700; color: #e85d1a;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+}
+.ae-sec-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 800; color: #0d1b40; line-height: 1.15; margin-bottom: 14px;
+}
+.ae-sec-desc {
+  font-size: 16px; color: #3d4f7c; max-width: 560px;
+  line-height: 1.7; margin-bottom: 48px;
+}
+.ae-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 22px;
+}
+.ae-course-card {
+  border: 1.5px solid rgba(13,27,64,0.1);
+  border-radius: 18px; padding: 26px;
+  transition: all 0.25s; position: relative;
+  overflow: hidden; background: #ffffff;
+}
+.ae-course-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: #e85d1a;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s;
+}
+.ae-course-card:hover {
+  box-shadow: 0 8px 32px rgba(13,27,64,0.12);
+  transform: translateY(-4px); border-color: rgba(232,93,26,0.2);
+}
+.ae-course-card:hover::before { transform: scaleX(1); }
+.ae-course-icon {
+  width: 50px; height: 50px; background: #fdf0e8;
+  border-radius: 12px; display: flex; align-items: center;
+  justify-content: center; font-size: 24px; margin-bottom: 16px;
+}
+.ae-course-card h3 { font-size: 17px; font-weight: 700; color: #0d1b40; margin-bottom: 8px; }
+.ae-course-card p { font-size: 14px; color: #3d4f7c; line-height: 1.6; margin-bottom: 14px; }
+.ae-course-tag {
+  display: inline-block; background: #f8f6f2;
+  border-radius: 6px; padding: 3px 9px;
+  font-size: 11px; font-weight: 600; color: #3d4f7c;
+  margin: 2px 2px 2px 0;
+}
+.ae-course-badge {
+  position: absolute; top: 18px; right: 18px;
+  background: #e85d1a; color: #ffffff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 100px;
+}
+.ae-course-badge.ae-gold { background: #f0a500; color: #0d1b40; }
+@media (max-width: 600px) {
+  .ae-courses-wrap { padding: 60px 4%; }
+}
+</style>
+
+<div class="ae-courses-wrap" id="ae-courses">
+  <div class="ae-sec-label">What We Offer</div>
+  <div class="ae-sec-title">Our Professional Courses</div>
+  <div class="ae-sec-desc">
+    Choose from a wide range of government-approved diploma, computer, accounting, and skill-based courses designed for your career growth.
+  </div>
+
+  <div class="ae-courses-grid">
+
+    <div class="ae-course-card">
+      <div class="ae-course-badge">Popular</div>
+      <div class="ae-course-icon">🎓</div>
+      <h3>DCAA – Diploma in Computer Application &amp; Accounting</h3>
+      <p>Our flagship course combining computer skills with professional accounting. Available in Basic, Regular &amp; Advance levels.</p>
+      <span class="ae-course-tag">Business Accounting</span>
+      <span class="ae-course-tag">Advance Tally</span>
+      <span class="ae-course-tag">GST &amp; TDS</span>
+      <span class="ae-course-tag">Busy Software</span>
+      <span class="ae-course-tag">Power BI</span>
+      <span class="ae-course-tag">AI &amp; ML</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">💼</div>
+      <h3>DCA – Diploma in Computer Application</h3>
+      <p>Comprehensive computer diploma covering all essential applications for modern office and business use.</p>
+      <span class="ae-course-tag">MS Office</span>
+      <span class="ae-course-tag">Internet &amp; Email</span>
+      <span class="ae-course-tag">Tally Prime</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">🏅</div>
+      <h3>PGDCA – Post Graduate Diploma in Computer Application</h3>
+      <p>Advanced post-graduate level program for graduates looking to build a strong career in computing and IT.</p>
+      <span class="ae-course-tag">Advanced Programming</span>
+      <span class="ae-course-tag">Database Management</span>
+      <span class="ae-course-tag">G Suite</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-badge ae-gold">New</div>
+      <div class="ae-course-icon">🤖</div>
+      <h3>Data Analytics &amp; Generative AI</h3>
+      <p>Learn the most in-demand skills of the future — data analysis, machine learning, and generative AI tools.</p>
+      <span class="ae-course-tag">Data Science</span>
+      <span class="ae-course-tag">ChatGPT &amp; AI</span>
+      <span class="ae-course-tag">Python Basics</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">📊</div>
+      <h3>Accounting &amp; Taxation</h3>
+      <p>Master GST, TDS, income tax, and advanced accounting for a solid career in finance and accounts.</p>
+      <span class="ae-course-tag">Direct Tax</span>
+      <span class="ae-course-tag">GST Filing</span>
+      <span class="ae-course-tag">Zoho Software</span>
+      <span class="ae-course-tag">Banking &amp; Auditing</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>Build modern websites and web apps with HTML, CSS, JavaScript and popular frameworks.</p>
+      <span class="ae-course-tag">HTML &amp; CSS</span>
+      <span class="ae-course-tag">JavaScript</span>
+      <span class="ae-course-tag">Responsive Design</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">📈</div>
+      <h3>Advanced Excel &amp; Power BI</h3>
+      <p>Unlock the power of data with Advanced Excel and Power BI for business intelligence and reporting.</p>
+      <span class="ae-course-tag">Pivot Tables</span>
+      <span class="ae-course-tag">Power BI Dashboard</span>
+      <span class="ae-course-tag">Data Visualization</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">💄</div>
+      <h3>Diploma in Beautician &amp; Cosmetology</h3>
+      <p>Comprehensive beauty training — skin care, hair treatments, makeup from basic to advanced.</p>
+      <span class="ae-course-tag">Skin &amp; Hair Care</span>
+      <span class="ae-course-tag">Makeup</span>
+      <span class="ae-course-tag">Manicure &amp; Pedicure</span>
+    </div>
+
+    <div class="ae-course-card">
+      <div class="ae-course-icon">👗</div>
+      <h3>Diploma in Fashion Designing</h3>
+      <p>Learn cutting, stitching, embroidery, arts &amp; crafts for Indian and Western fashion design.</p>
+      <span class="ae-course-tag">Cutting &amp; Stitching</span>
+      <span class="ae-course-tag">Embroidery</span>
+      <span class="ae-course-tag">Fashion Arts</span>
+    </div>
+
+  </div>
+</div>

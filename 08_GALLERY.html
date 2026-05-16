@@ -1,0 +1,142 @@
+<!-- ============================================================
+  SECTION 8: GALLERY
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #ffffff
+
+  NOTE: Upload your actual photos to Systeme.io's media library
+  and replace the src="" values below with your uploaded image URLs.
+  Photos to upload:
+    - Computer lab / classroom photos (from WhatsApp images 4 & 10)
+    - Students outside the institute (images 2 & 5)
+    - Promotional banners (images 1, 3, 7, 8)
+  ============================================================ -->
+
+<style>
+.ae-gallery-wrap {
+  padding: 80px 5%; background: #ffffff;
+  font-family: 'Sora', sans-serif;
+}
+.ae-gallery-wrap * { box-sizing: border-box; }
+.ae-gallery-label {
+  font-size: 12px; font-weight: 700; color: #e85d1a;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+}
+.ae-gallery-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 800; color: #0d1b40; line-height: 1.15; margin-bottom: 14px;
+}
+.ae-gallery-desc {
+  font-size: 16px; color: #3d4f7c; max-width: 560px;
+  line-height: 1.7; margin-bottom: 40px;
+}
+.ae-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 220px 220px;
+  gap: 14px;
+}
+.ae-gallery-item {
+  border-radius: 14px; overflow: hidden;
+  position: relative; background: #162254;
+}
+.ae-gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+.ae-gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block; transition: transform 0.5s ease;
+}
+.ae-gallery-item:hover img { transform: scale(1.05); }
+.ae-gallery-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,27,64,0.85) 0%, transparent 100%);
+  padding: 20px 16px 14px;
+  font-size: 13px; font-weight: 600; color: #ffffff;
+  opacity: 0; transition: opacity 0.25s;
+}
+.ae-gallery-item:hover .ae-gallery-caption { opacity: 1; }
+
+/* Placeholder style if no image is loaded */
+.ae-gallery-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: #1a2a5e; color: rgba(255,255,255,0.4);
+  font-size: 13px; gap: 8px;
+}
+.ae-gallery-placeholder-icon { font-size: 32px; }
+
+@media (max-width: 768px) {
+  .ae-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .ae-gallery-item:first-child { grid-column: span 2; height: 220px; }
+  .ae-gallery-item { height: 180px; }
+}
+@media (max-width: 480px) {
+  .ae-gallery-grid { grid-template-columns: 1fr; }
+  .ae-gallery-item:first-child { grid-column: auto; }
+  .ae-gallery-wrap { padding: 60px 4%; }
+}
+</style>
+
+<div class="ae-gallery-wrap" id="ae-gallery">
+  <div class="ae-gallery-label">Inside Our Institute</div>
+  <div class="ae-gallery-title">Campus &amp; Students</div>
+  <div class="ae-gallery-desc">
+    A glimpse into the Adhyayan Edutech learning environment — modern labs, engaged classrooms, and thriving students.
+  </div>
+
+  <div class="ae-gallery-grid">
+
+    <!-- PHOTO 1: Replace src with your uploaded classroom/lab photo URL -->
+    <div class="ae-gallery-item">
+      <img src="YOUR_CLASSROOM_PHOTO_URL_HERE" alt="Adhyayan Edutech Computer Lab" onerror="this.style.display='none'; this.parentElement.querySelector('.ae-gallery-placeholder').style.display='flex';">
+      <div class="ae-gallery-placeholder" style="display:none;">
+        <div class="ae-gallery-placeholder-icon">🏫</div>
+        <span>Upload: Classroom / Lab Photo</span>
+      </div>
+      <div class="ae-gallery-caption">Our Modern Computer Lab</div>
+    </div>
+
+    <!-- PHOTO 2: Replace src with your uploaded students group photo -->
+    <div class="ae-gallery-item">
+      <img src="YOUR_STUDENTS_PHOTO_URL_HERE" alt="Students at Adhyayan Edutech" onerror="this.style.display='none'; this.parentElement.querySelector('.ae-gallery-placeholder').style.display='flex';">
+      <div class="ae-gallery-placeholder" style="display:none;">
+        <div class="ae-gallery-placeholder-icon">👨‍🎓</div>
+        <span>Upload: Students Group Photo</span>
+      </div>
+      <div class="ae-gallery-caption">Our Students</div>
+    </div>
+
+    <!-- PHOTO 3: Replace src with institute exterior photo -->
+    <div class="ae-gallery-item">
+      <img src="YOUR_INSTITUTE_EXTERIOR_URL_HERE" alt="Adhyayan Edutech Institute" onerror="this.style.display='none'; this.parentElement.querySelector('.ae-gallery-placeholder').style.display='flex';">
+      <div class="ae-gallery-placeholder" style="display:none;">
+        <div class="ae-gallery-placeholder-icon">🏢</div>
+        <span>Upload: Institute Exterior</span>
+      </div>
+      <div class="ae-gallery-caption">Adhyayan Edutech, Kullu</div>
+    </div>
+
+    <!-- PHOTO 4: Replace src with teaching/session photo -->
+    <div class="ae-gallery-item">
+      <img src="YOUR_TEACHING_SESSION_URL_HERE" alt="Teaching Session at Adhyayan Edutech" onerror="this.style.display='none'; this.parentElement.querySelector('.ae-gallery-placeholder').style.display='flex';">
+      <div class="ae-gallery-placeholder" style="display:none;">
+        <div class="ae-gallery-placeholder-icon">👩‍🏫</div>
+        <span>Upload: Teaching Session</span>
+      </div>
+      <div class="ae-gallery-caption">Expert-led Training Sessions</div>
+    </div>
+
+    <!-- PHOTO 5: Replace src with practical training photo -->
+    <div class="ae-gallery-item">
+      <img src="YOUR_PRACTICAL_TRAINING_URL_HERE" alt="Practical Training" onerror="this.style.display='none'; this.parentElement.querySelector('.ae-gallery-placeholder').style.display='flex';">
+      <div class="ae-gallery-placeholder" style="display:none;">
+        <div class="ae-gallery-placeholder-icon">💻</div>
+        <span>Upload: Practical Training</span>
+      </div>
+      <div class="ae-gallery-caption">Hands-on Practical Training</div>
+    </div>
+
+  </div>
+</div>

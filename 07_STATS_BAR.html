@@ -1,0 +1,71 @@
+<!-- ============================================================
+  SECTION 7: STATS BAR (Social Proof)
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #ffffff
+  ============================================================ -->
+
+<style>
+.ae-stats-wrap {
+  padding: 60px 5%; background: #ffffff;
+  font-family: 'Sora', sans-serif;
+  border-top: 1px solid rgba(13,27,64,0.08);
+  border-bottom: 1px solid rgba(13,27,64,0.08);
+}
+.ae-stats-wrap * { box-sizing: border-box; }
+.ae-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px; text-align: center;
+}
+.ae-stat-card { }
+.ae-stat-num {
+  font-size: 42px; font-weight: 800; color: #0d1b40;
+  line-height: 1; margin-bottom: 8px;
+}
+.ae-stat-num span { color: #e85d1a; }
+.ae-stat-bar {
+  width: 36px; height: 3px; background: #e85d1a;
+  margin: 8px auto 10px; border-radius: 2px;
+}
+.ae-stat-lbl { font-size: 14px; font-weight: 600; color: #3d4f7c; }
+.ae-stat-sub { font-size: 12px; color: #8a96b5; margin-top: 2px; }
+@media (max-width: 600px) {
+  .ae-stats-wrap { padding: 48px 4%; }
+  .ae-stat-num { font-size: 34px; }
+}
+</style>
+
+<div class="ae-stats-wrap">
+  <div class="ae-stats-grid">
+    <div class="ae-stat-card">
+      <div class="ae-stat-num">500<span>+</span></div>
+      <div class="ae-stat-bar"></div>
+      <div class="ae-stat-lbl">Students Trained</div>
+      <div class="ae-stat-sub">And counting!</div>
+    </div>
+    <div class="ae-stat-card">
+      <div class="ae-stat-num">10<span>+</span></div>
+      <div class="ae-stat-bar"></div>
+      <div class="ae-stat-lbl">Skill Courses</div>
+      <div class="ae-stat-sub">Government approved</div>
+    </div>
+    <div class="ae-stat-card">
+      <div class="ae-stat-num">2</div>
+      <div class="ae-stat-bar"></div>
+      <div class="ae-stat-lbl">Branches</div>
+      <div class="ae-stat-sub">In Kullu, HP</div>
+    </div>
+    <div class="ae-stat-card">
+      <div class="ae-stat-num">40<span>%</span></div>
+      <div class="ae-stat-bar"></div>
+      <div class="ae-stat-lbl">Combo Discount</div>
+      <div class="ae-stat-sub">Limited time offer</div>
+    </div>
+    <div class="ae-stat-card">
+      <div class="ae-stat-num">4<span>+</span></div>
+      <div class="ae-stat-bar"></div>
+      <div class="ae-stat-lbl">Certifications</div>
+      <div class="ae-stat-sub">NSDC, Skill India &amp; more</div>
+    </div>
+  </div>
+</div>

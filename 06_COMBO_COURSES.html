@@ -1,0 +1,130 @@
+<!-- ============================================================
+  SECTION 6: COMBO COURSES
+  Systeme.io: Add an HTML element → paste this code
+  Set the Section background to: #f8f6f2
+  ============================================================ -->
+
+<style>
+.ae-combo-wrap {
+  padding: 80px 5%; background: #f8f6f2;
+  font-family: 'Sora', sans-serif;
+}
+.ae-combo-wrap * { box-sizing: border-box; }
+.ae-combo-label {
+  font-size: 12px; font-weight: 700; color: #e85d1a;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+}
+.ae-combo-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 800; color: #0d1b40; line-height: 1.15; margin-bottom: 14px;
+}
+.ae-combo-desc {
+  font-size: 16px; color: #3d4f7c; max-width: 560px;
+  line-height: 1.7; margin-bottom: 48px;
+}
+.ae-combo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 22px; margin-bottom: 48px;
+}
+.ae-combo-card {
+  background: #ffffff; border-radius: 18px;
+  padding: 32px; border: 1.5px solid rgba(13,27,64,0.1);
+  position: relative; transition: all 0.25s;
+}
+.ae-combo-card:hover { box-shadow: 0 8px 32px rgba(13,27,64,0.12); transform: translateY(-4px); }
+.ae-combo-card.ae-featured { border-color: rgba(232,93,26,0.35); }
+.ae-combo-discount {
+  position: absolute; top: -13px; right: 22px;
+  background: #e85d1a; color: #ffffff;
+  font-size: 12px; font-weight: 800;
+  padding: 5px 14px; border-radius: 100px;
+  font-family: 'Sora', sans-serif;
+}
+.ae-combo-card h3 { font-size: 22px; font-weight: 800; color: #0d1b40; margin-bottom: 4px; }
+.ae-combo-plus { font-size: 26px; color: #e85d1a; font-weight: 800; margin: 6px 0; }
+.ae-combo-sub { font-size: 16px; font-weight: 600; color: #3d4f7c; margin-bottom: 20px; }
+.ae-combo-list { list-style: none; }
+.ae-combo-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: #3d4f7c;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(13,27,64,0.08);
+}
+.ae-combo-list li:last-child { border-bottom: none; }
+.ae-combo-list li::before { content: '✓'; color: #e85d1a; font-weight: 800; font-size: 14px; }
+.ae-combo-cta { text-align: center; }
+.ae-combo-cta p { font-size: 15px; color: #3d4f7c; margin-bottom: 18px; }
+.ae-combo-cta p strong { color: #0d1b40; }
+.ae-combo-cta a {
+  display: inline-block;
+  background: #e85d1a; color: #ffffff;
+  padding: 14px 28px; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  text-decoration: none; font-family: 'Sora', sans-serif;
+  transition: all 0.25s;
+}
+.ae-combo-cta a:hover { background: #0d1b40; transform: translateY(-2px); }
+@media (max-width: 600px) {
+  .ae-combo-wrap { padding: 60px 4%; }
+}
+</style>
+
+<div class="ae-combo-wrap" id="ae-combo">
+  <div class="ae-combo-label">Special Offer</div>
+  <div class="ae-combo-title">Combo Courses — Limited Time!</div>
+  <div class="ae-combo-desc">
+    Maximize your skills and savings with our combo packages. Enroll in a combination and get up to 40% off on total fees.
+  </div>
+
+  <div class="ae-combo-grid">
+
+    <div class="ae-combo-card">
+      <div class="ae-combo-discount">Up to 40% OFF</div>
+      <h3>DCA</h3>
+      <div class="ae-combo-plus">+</div>
+      <div class="ae-combo-sub">Accounting &amp; Taxation</div>
+      <ul class="ae-combo-list">
+        <li>Business Computer Applications</li>
+        <li>Advance Tally Prime</li>
+        <li>Direct Tax &amp; GST</li>
+        <li>TDS Filing</li>
+        <li>Business Communication</li>
+      </ul>
+    </div>
+
+    <div class="ae-combo-card ae-featured">
+      <div class="ae-combo-discount">Most Popular</div>
+      <h3>PGDCA</h3>
+      <div class="ae-combo-plus">+</div>
+      <div class="ae-combo-sub">Accounting &amp; Taxation</div>
+      <ul class="ae-combo-list">
+        <li>Post Graduate Computer Diploma</li>
+        <li>Advanced Accounts &amp; Zoho</li>
+        <li>Banking &amp; Auditing</li>
+        <li>Power BI &amp; Advanced Excel</li>
+        <li>AI &amp; Machine Learning Intro</li>
+      </ul>
+    </div>
+
+    <div class="ae-combo-card">
+      <div class="ae-combo-discount">Up to 40% OFF</div>
+      <h3>Beautician</h3>
+      <div class="ae-combo-plus">+</div>
+      <div class="ae-combo-sub">Fashion Designing</div>
+      <ul class="ae-combo-list">
+        <li>Skin &amp; Hair Treatments</li>
+        <li>Makeup — Basic to Advanced</li>
+        <li>Cutting &amp; Stitching</li>
+        <li>Embroidery &amp; Arts &amp; Crafts</li>
+        <li>Indian &amp; Western Dress Design</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="ae-combo-cta">
+    <p>📞 Call for a <strong>Free Counseling Session</strong> and find the right combo for you!</p>
+    <a href="tel:9318543435">Call Today: 9318543435</a>
+  </div>
+</div>
